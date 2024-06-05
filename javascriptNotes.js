@@ -111,6 +111,14 @@ comparisonOperators
     5 >= 5; true
   <= less than or equal to
     5 <= 5; true
+
+logicalOperators
+  && is the and operator
+    true && true; true
+  || is the or operator
+    true || false; true
+  ! is the not operator
+    !true; false
 */
 
 /* arrays
@@ -119,11 +127,45 @@ arrays are placed within [brackets]
 arrays are used to store multiple values in a single variable
   let arrayName = [value1, value2, value3];
 
-arrayName.push(value4); appends a value to the end of the target array
-  arrayName = [value1, value2, value3, value4]
+/* arrayActions  
+  arrayName.push(value4); appends a value to the end of the target array
+    arrayName = [value1, value2, value3, value4]
+  
+  arrayName.reverse(); reverses the order of the array
+    arrayName = [value4, value3, value2, value1]
 
-arrayName.reverse(); reverses the order of the array
-  arrayName = [value4, value3, value2, value1]
+  arrayName.sort(); sorts the array in ascending order
+    arrayName = [value1, value2, value3, value4]
+
+  arrayName.length; returns the number of values in the array
+    arrayName.length; 4
+
+  arrayName.pop(); removes the last value from the array
+    arrayName = [value1, value2, value3]
+
+  arrayName.unpop(value4); adds a value to the end of the array
+    arrayName = [value1, value2, value3, value4]
+
+  arrayName.shift(); removes the first value from the array
+    arrayName = [value2, value3]
+
+  arrayName.unshift(value1); adds a value to the beginning of the array
+    arrayName = [value1, value2, value3]
+
+  arrayName.splice(1, 0, value4); adds a value to the array at the specified index
+    arrayName = [value1, value4, value2, value3]
+
+  arrayName.splice(1, 1); removes a value from the array at the specified index
+    arrayName = [value1, value2, value3]
+
+  arrayName.slice(1, 2); returns a new array with the values from the specified index range
+    arrayName = [value2, value3]
+
+  arrayName.concat([value4, value5]); combines two arrays into a single array
+    arrayName = [value1, value2, value3, value4value5]
+
+  arrayName.join(' '); combines the values of an array into a single string
+    arrayName = 'value1 value2 value3 value4 value5'
 
 nested arrays are arrays within arrays
   arrayName = [[value1, value2], [value3, value4]];
@@ -154,9 +196,6 @@ if statements are used to perform different actions based on different condition
     outputTrue
   }
 
-? is used to whittle down the length of a simple if statement
-  const (condition1) ? outputTrue : outputFalse;
-
 else if statements are used to specify a new condition if the first condition is false
   else if (condition2) {
     outputTrue
@@ -165,9 +204,26 @@ else statements are used to perform a different action if no previous conditions
   else {
     outputFalse
   }
-*/
 
+ternary operators are used to whittle down the length of a simple if else statement
+  const output = (condition1) ? outputTrue : outputFalse;
 
+switch case statements are used to perform different actions based on different conditions
+  switch (expression) {
+    case condition1: // acts as an if statement
+      outputTrue
+      break;
+    case condition2:  // acts as an else if statement
+      outputTrue
+      break;
+    default: // acts as an else statement
+      outputFalse
+  }
+  */
+
+/* loops
+
+*
 
 
 
